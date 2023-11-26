@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
     <title>Anime List</title>
     <style>
         body{
@@ -10,12 +8,79 @@
             border-width: 2px;
             border-color: blue;
         }
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .scrolling-image-container {
+        overflow: hidden;
+        }
+        .scrolling-image {
+            background-repeat: repeat-x;
+            height: 405px;
+            width: 9000px;
+            animation: slide 20s linear infinite;
+            
+        }
+        
+        @keyframes slide {
+        0% {
+        transform: translate(0);
+            }
+        100% {
+        transform: translate(-4050px); /* The image width */
+         }
+        }
+
+        nav {
+        
+            top: 0;
+            background-color:grey;
+            display: flex;
+            justify-content: space-around;
+            align-items:center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+          
+            font-size: 20px;
+            font-style:italic;
+            font-family:fantasy;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            background-size:cover;
+            color:black;
+            font-size: 20px;
+        }
+
+        .content {
+            padding: 20px;
+            margin-top: 20px;
+        }
         
         h1{
+            margin-top: 0%;
+            padding: 3%;
             font-size:xx-large;
             font-style: italic;
             background-color: aqua;
         }
+
+        .logo-container{
+            overflow: hidden;
+        }
+
+        .logo{
+        background-color:antiquewhite;
+
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -48,14 +113,57 @@
         h2{
             background-color: aqua;
         }
+        #myInput {
+            margin-top: 40px;
+            float: right;
+            margin-right:200px ;
+            background-position: 10px 12px; 
+            width: 600px; 
+            font-size: 20px; 
+            padding: 20px 20px 20px 50px; 
+            border: 10px black #ddd; 
+            border-radius: 10px;
+            margin-bottom: 12px; 
+            background-color: lightgray;
+            border-width: 5px;
+
+        }
     </style>
 </head>
 <body>
-    <b></b><center><h1>ANIME LIST'O</h1></center></b>
+    <div class="logo-container">
+        <div class="logo">
+            <img src="logo.png" width="150px;" height="120px" style="float:left margin-right=10px">
+            <img src="Banner.png" width="315px" height="120px"/>
+
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..."style="float"/>
+        </div>
     
-    <center><img src="https://cdn.myanimelist.net/images/about_me/main_visual/5349225-3bd8888a-1b2f-4a11-ab97-16334c09b52f.jpg"/ width="100%" height="400px"/></center>
+</div>
 
+    <div class="gid-container">
+    <img src="https://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="260" />
+    <img src="https://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="260" />
+    <img src="https://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="260" />
+    <img src="https://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="260" />
+    <img src="https://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="260" />
+    </div>
+    
+    <div class="scrolling-image-container">
+        <div class="scrolling-image">
+      <img src="https://assets-prd.ignimgs.com/2022/08/17/top25animecharacters-blogroll-1660777571580.jpg" height="400px" width="900px"style="float:left margin-right:1px;">
+      <img src="https://i.pinimg.com/736x/4a/12/79/4a12797da687321c3c02cce92e241e54.jpg"height="400px" width="900px" style="float:left";>
+      <img src="https://c4.wallpaperflare.com/wallpaper/300/277/258/anime-dr-stone-senku-ishigami-hd-wallpaper-preview.jpg" height="400px" width="900px" style="float:left";>
+      <img src="https://i.pinimg.com/736x/94/c8/4d/94c84d76e397bff78461ddd49526e298.jpg" height="400px" width="900px" style="float:left";>
+      <img src="https://external-preview.redd.it/TfmzanQ4eG3KvYV0__CjY9K6E2iMVFW0qOijgqRkYL8.jpg?auto=webp&s=c450ee7f57807a52f50a1892156ecce10e33d6c3" height="400px" width="900px" style="float:left";>
+      <img src="https://i.pinimg.com/originals/e8/86/1d/e8861d90d77058f5c7da8206f80f7b77.jpg" height="400px" width="900px" style="float:left";>
+    </div>
+    <nav>
 
+        <a href="#">Anime</a>
+        <a href="#">Community</a>
+        <a href="Info.html">About Us</a>
+    </nav>
     <div class="container">
         <center><h2>Top 10 Anime</h2></center>
         <div class="anime-list">
